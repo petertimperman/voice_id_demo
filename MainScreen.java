@@ -34,6 +34,7 @@ public class MainScreen extends AppCompatActivity {
         final Profile peter = new Profile("Peter", "Timperman");
 
         final Button closeButton = (Button) this.findViewById(R.id.verify);
+        closeButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
         //closeButton.setPadding(400,400,400,400);
         closeButton.setOnClickListener(new OnClickListener() {
 
@@ -42,6 +43,20 @@ public class MainScreen extends AppCompatActivity {
                 closeButton.setBackgroundColor(Color.parseColor("#ff0000"));
                 verifier.authenicateUser(peter);
                 //verifier.enrollUser(peter);
+                closeButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
+            }
+        });
+        final Button enrollButton = (Button) this.findViewById(R.id.enroll);
+        enrollButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
+        //closeButton.setPadding(400,400,400,400);
+        enrollButton.setOnClickListener(new OnClickListener() {
+
+            public void onClick(View v) {
+
+                enrollButton.setBackgroundColor(Color.parseColor("#ff0000"));
+                //verifier.authenicateUser(peter);
+                verifier.enrollUser(peter);
+                enrollButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
 
             }
         });
