@@ -31,8 +31,8 @@ public class MainScreen extends AppCompatActivity {
         }
 
         final Verifier verifier = new Verifier();
-        final Profile peter = new Profile("Peter", "Timperman");
-
+        final Profile jipping = new Profile("Micheal", "Jipping");
+        //verifier.createUser(jipping);
         final Button closeButton = (Button) this.findViewById(R.id.verify);
         closeButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
         //closeButton.setPadding(400,400,400,400);
@@ -41,7 +41,7 @@ public class MainScreen extends AppCompatActivity {
             public void onClick(View v) {
 
                 closeButton.setBackgroundColor(Color.parseColor("#ff0000"));
-                verifier.authenicateUser(peter);
+                verifier.authenicateUser(jipping);
                 //verifier.enrollUser(peter);
                 closeButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
             }
@@ -55,7 +55,7 @@ public class MainScreen extends AppCompatActivity {
 
                 enrollButton.setBackgroundColor(Color.parseColor("#ff0000"));
                 //verifier.authenicateUser(peter);
-                verifier.enrollUser(peter);
+                verifier.enrollUser(jipping);
                 enrollButton.setBackgroundColor(Color.parseColor("#ff99cc00"));
 
             }
